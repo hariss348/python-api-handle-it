@@ -2,8 +2,8 @@ import unittest
 import json
 import HtmlTestRunner
 
-import application.application.Application as Application
-import machine.machine.Machine as Machine
+from machine.machine import Machine
+from application.application import Application
 
 class TestApplication(unittest.TestCase):
     # Initialisation de données pour mes tests
@@ -18,8 +18,8 @@ class TestApplication(unittest.TestCase):
 
     # Exemple de test avec un echec (failure)
     # def test_liste_application_ko(self):
-    #     contenu_liste = Application.liste()
-    #     self.assertEqual(contenu_liste,'Une phrase')
+    #    contenu_liste = Application.liste()
+    #    self.assertEqual(contenu_liste,'Une phrase')
 
     def test_liste_application_ok(self):
         contenu_liste = Application.liste()
